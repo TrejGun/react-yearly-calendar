@@ -95,7 +95,6 @@ export default class Calendar extends React.Component {
       days.push (
         <th
           key={`weekday-${i}`}
-          className={ i%7 === 0 ? 'bolder': ''}
         >
           {day}
         </th>

@@ -180,8 +180,12 @@ export class Month extends React.Component {
             }
           } else if( obj instanceof Array ) {
             obj.map( d => {
-              if( day.format("YYYY-MM-DD") === d)
-                classes.push(k)
+              if( typeof d === "string" && day.format("YYYY-MM-DD") === d ) {
+	              classes.push( k )
+              }
+              if( typeof d === "number" && day.day() === d ) {
+                classes.push( k )
+              }
             });
           } else if( obj instanceof Function ) {
             if( obj(day) ) {

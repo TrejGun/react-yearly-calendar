@@ -165,11 +165,6 @@ export class Month extends React.Component {
         }
       }
 
-      if( (i-1)%7 === 0 ) {
-        // sunday
-        classes.push('bolder');
-      }
-
       if( customClasses ) {
         Object.keys(customClasses).map( k => {
           const obj = customClasses[k];
